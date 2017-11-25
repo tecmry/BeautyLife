@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.mao.beautylife"
@@ -19,8 +27,17 @@ android {
 }
 
 dependencies {
+    // LeanCloud 基础包
+    compile('cn.leancloud.android:avoscloud-sdk:v4.4.4')
+    // avoscloud-sns：LeanCloud 第三方登录包
+    compile('cn.leancloud.android:avoscloud-sns:v4.4.4@aar')
+    compile('cn.leancloud.android:qq-sdk:1.6.1-leancloud')
+    compile('cn.leancloud.android:avoscloud-push:v4.4.4@aar') { transitive = true }
+
+    //Android项目包
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
@@ -29,4 +46,5 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.3.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
     compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
 }
