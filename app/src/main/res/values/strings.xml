@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BeautyLife</string>
     <string name="登录">登录</string>
+    <string name="注册">注册</string>
     <string name="其他登录方式">— 其他登录方式 —</string>
     <string name="忘记密码">忘记密码</string>
     <string name="还没有账号">还有账号？快来注册～</string>

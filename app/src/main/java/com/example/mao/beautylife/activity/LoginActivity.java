@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.avos.avoscloud.AVUser;
 import com.example.mao.beautylife.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {

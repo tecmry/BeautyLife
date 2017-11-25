@@ -9,11 +9,14 @@ android {
     lintOptions {
         abortOnError false
     }
-    compileSdkVersion 26
+    dataBinding {
+        enabled = true
+    }
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.mao.beautylife"
         minSdkVersion 22
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -33,11 +36,10 @@ dependencies {
     compile('cn.leancloud.android:avoscloud-sns:v4.4.4@aar')
     compile('cn.leancloud.android:qq-sdk:1.6.1-leancloud')
     compile('cn.leancloud.android:avoscloud-push:v4.4.4@aar') { transitive = true }
-
     //Android项目包
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.0.1'
+    implementation 'com.android.support:design:27.0.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
