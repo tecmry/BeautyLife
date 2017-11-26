@@ -39,21 +39,14 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onBackPressed() {
-        Intent mHomeIntent = new Intent(Intent.ACTION_MAIN);
-        mHomeIntent.addCategory(Intent.CATEGORY_HOME);
-        mHomeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-        startActivity(mHomeIntent);
-    }
-
-    @Override
     public void onClick(View v) {
 
     }
 
     @Override
     public void tabSelectedListener(TabLayout.Tab tab) {
+        switch (tab.getPosition()){
 
+        }
     }
 }

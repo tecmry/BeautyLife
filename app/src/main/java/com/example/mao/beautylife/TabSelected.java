@@ -21,6 +21,4 @@ public class TabSelected extends TabLayout.ViewPagerOnTabSelectedListener {
         super.onTabSelected(tab);
         listener.tabSelectedListener(tab);
     }
-
-
 }

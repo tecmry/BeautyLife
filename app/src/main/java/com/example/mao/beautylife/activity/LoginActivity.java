@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.avos.avoscloud.AVUser;
 import com.example.mao.beautylife.R;
@@ -32,7 +33,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
             case R.id.activity_login_login_btn:
+                String account = binding.activityLoginEditAccount.getText().toString();
+                String password = binding.activityLoginEditPass.getText().toString();
+                if (account.equals("") || password.equals("")){
+                    Toast.makeText(this, "请输入账号与密码", Toast.LENGTH_SHORT).show();
+                }else {
 
+                }
             default:
                 break;
         }

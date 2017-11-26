@@ -5,4 +5,8 @@
     <string name="其他登录方式">— 其他登录方式 —</string>
     <string name="忘记密码">忘记密码</string>
     <string name="还没有账号">还有账号？快来注册～</string>
+    <string name="请输入用户名">请输入用户名</string>
+    <string name="请输入邮箱">请输入邮箱</string>
+    <string name="请输入密码">请输入密码</string>
+    <string name="请再次输入密码">请再次输入密码</string>
 </resources>
