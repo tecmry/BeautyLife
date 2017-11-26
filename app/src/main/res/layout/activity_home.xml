@@ -9,14 +9,14 @@
         android:layout_height="match_parent">
 
         <com.example.mao.beautylife.view.NoScrollViewPager
-            android:id="@+id/activity_user_view_pager"
+            android:id="@+id/activity_home_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/activity_user_tab">
+            android:layout_above="@+id/activity_home_tab">
         </com.example.mao.beautylife.view.NoScrollViewPager>
 
         <android.support.design.widget.TabLayout
-            android:id="@+id/activity_user_tab"
+            android:id="@+id/activity_home_tab"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/toolbar_bg"
@@ -26,24 +26,21 @@
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/user_info"/>
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/user_self"/>
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </android.support.design.widget.TabLayout>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/activity_user_photo"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:src="@drawable/user_push"
-            android:layout_marginBottom="8dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 

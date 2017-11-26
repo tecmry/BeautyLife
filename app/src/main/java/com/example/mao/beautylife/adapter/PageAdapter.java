@@ -7,30 +7,28 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.mao.beautylife.fragment.InfoFragment;
 import com.example.mao.beautylife.fragment.SelfFragment;
 
+import java.util.List;
+
 /**
  * Created by lenovo on 2017/8/17.
  */
 
 public class PageAdapter extends FragmentStatePagerAdapter {
 
-    public PageAdapter(FragmentManager fm) {
+    private List<Fragment> list;
+
+    public PageAdapter(FragmentManager fm, List<Fragment> list) {
         super(fm);
+        this.list = list;
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                return new InfoFragment();
-            case 1:
-                return new SelfFragment();
-            default:
-                return null;
-        }
+        return list.get(position);
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return list.size();
     }
 }
