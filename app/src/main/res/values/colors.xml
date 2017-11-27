@@ -7,5 +7,9 @@
     <color name="textColor_Hint">#C0C0C0</color>
     <color name="textColor_Gray">#B9B9B9</color>
     <color name="textColor_Black">#000000</color>
+    <color name="textColor_Blue">#0867E9</color>
+    <color name="textColor_Red">#F93E3F</color>
+    <color name="textColor_Yellow">#FFD800</color>
+    <color name="itemColor">#FCFAF2</color>
     <color name="buttonColor_Coffee">#64363B</color>
 </resources>
