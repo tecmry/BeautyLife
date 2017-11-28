@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.example.mao.beautylife.R;
@@ -22,7 +23,7 @@ import com.youth.banner.loader.ImageLoaderInterface;
  * Created by -- Mao on 2017/11/27.
  */
 
-public class HomeFragment extends Fragment implements ImageLoaderInterface {
+public class HomeFragment extends Fragment implements ImageLoaderInterface, View.OnClickListener {
 
     private FragmentHomeBinding binding;
 
@@ -53,5 +54,10 @@ public class HomeFragment extends Fragment implements ImageLoaderInterface {
         binding.fragmentHomeBanner.isAutoPlay(true);
         binding.fragmentHomeBanner.setDelayTime(1500);
         binding.fragmentHomeBanner.start();
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

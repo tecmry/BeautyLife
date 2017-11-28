@@ -17,9 +17,10 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_centerInParent="true"
+            android:textCursorDrawable="@null"
             app:met_baseColor="@color/textColor_White"
             app:met_primaryColor="@color/textColor_White"
-            app:met_iconLeft="@drawable/edit_user"/>
+            app:met_iconLeft="@drawable/edit_user" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/activity_login_edit_pass"
@@ -29,6 +30,7 @@
             android:layout_marginEnd="32dp"
             android:layout_below="@+id/activity_login_edit_account"
             android:layout_centerHorizontal="true"
+            android:textCursorDrawable="@null"
             app:met_baseColor="@color/textColor_White"
             app:met_primaryColor="@color/textColor_White"
             app:met_iconLeft="@drawable/edit_pass"/>

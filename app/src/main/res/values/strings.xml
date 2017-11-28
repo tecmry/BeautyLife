@@ -12,4 +12,10 @@
     <string name="最in试色">最in试色</string>
     <string name="视频">视频</string>
     <string name="资讯">资讯</string>
+    <string name="更多">更多</string>
+    <string name="Type">Type something</string>
+    <string name="搜索">搜索</string>
+    <string name="title">标题</string>
+    <string name="info">简介</string>
+    <string name="name">用户名</string>
 </resources>

@@ -6,14 +6,18 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.example.mao.beautylife.R;
 import com.example.mao.beautylife.TabLayoutListener;
 import com.example.mao.beautylife.TabSelected;
 import com.example.mao.beautylife.adapter.PageAdapter;
 import com.example.mao.beautylife.databinding.ActivityHomeBinding;
+import com.example.mao.beautylife.fragment.CommunityFragment;
+import com.example.mao.beautylife.fragment.HomeFragment;
 import com.example.mao.beautylife.fragment.InfoFragment;
 import com.example.mao.beautylife.fragment.SelfFragment;
+import com.example.mao.beautylife.fragment.UserFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +30,12 @@ public class HomeActivity extends AppCompatActivity implements TabLayoutListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         binding.activityHomeViewPager.setNoScroll(true);
         List<Fragment> list = new ArrayList<>();
-
+        list.add(new HomeFragment());
+        list.add(new CommunityFragment());
+        list.add(new UserFragment());
         binding.activityHomeViewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), list));
         binding.activityHomeViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(binding.activityHomeTab));
         binding.activityHomeTab.addOnTabSelectedListener(new TabSelected(binding.activityHomeViewPager, this));
@@ -45,6 +52,25 @@ public class HomeActivity extends AppCompatActivity implements TabLayoutListener
 
     @Override
     public void tabSelectedListener(TabLayout.Tab tab) {
-
+        switch (tab.getPosition()){
+            case 0:
+                tab.setIcon(R.drawable.home_selected);
+                binding.activityHomeTab.getTabAt(1).setIcon(R.drawable.community_unselected);
+                binding.activityHomeTab.getTabAt(2).setIcon(R.drawable.user_unselected);
+                break;
+            case 1:
+                tab.setIcon(R.drawable.community_selected);
+                binding.activityHomeTab.getTabAt(0).setIcon(R.drawable.home_unselected);
+                binding.activityHomeTab.getTabAt(2).setIcon(R.drawable.user_unselected);
+                break;
+            case 2:
+                tab.setIcon(R.drawable.user_selected);
+                binding.activityHomeTab.getTabAt(0).setIcon(R.drawable.home_unselected);
+                binding.activityHomeTab.getTabAt(1).setIcon(R.drawable.community_unselected);
+                break;
+            default:
+                break;
+        }
     }
+
 }
