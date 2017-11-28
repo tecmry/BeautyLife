@@ -25,9 +25,6 @@
             android:name=".activity.RegisterActivity"
             android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name=".activity.UserActivity"
-            android:windowSoftInputMode="adjustPan"></activity>
-        <activity
             android:name=".activity.HomeActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>

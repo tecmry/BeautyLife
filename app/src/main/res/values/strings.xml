@@ -18,4 +18,6 @@
     <string name="title">标题</string>
     <string name="info">简介</string>
     <string name="name">用户名</string>
+    <string name="num">666</string>
+    <string name="search_hint">输入品牌、色号、肤色等关键字</string>
 </resources>

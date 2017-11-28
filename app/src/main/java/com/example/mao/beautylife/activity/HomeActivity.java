@@ -15,9 +15,7 @@ import com.example.mao.beautylife.adapter.PageAdapter;
 import com.example.mao.beautylife.databinding.ActivityHomeBinding;
 import com.example.mao.beautylife.fragment.CommunityFragment;
 import com.example.mao.beautylife.fragment.HomeFragment;
-import com.example.mao.beautylife.fragment.InfoFragment;
 import com.example.mao.beautylife.fragment.SelfFragment;
-import com.example.mao.beautylife.fragment.UserFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements TabLayoutListener
         List<Fragment> list = new ArrayList<>();
         list.add(new HomeFragment());
         list.add(new CommunityFragment());
-        list.add(new UserFragment());
+        list.add(new SelfFragment());
         binding.activityHomeViewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), list));
         binding.activityHomeViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(binding.activityHomeTab));
         binding.activityHomeTab.addOnTabSelectedListener(new TabSelected(binding.activityHomeViewPager, this));

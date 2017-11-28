@@ -4,9 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.mao.beautylife.fragment.InfoFragment;
-import com.example.mao.beautylife.fragment.SelfFragment;
-
 import java.util.List;
 
 /**

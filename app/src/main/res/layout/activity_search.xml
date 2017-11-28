@@ -8,6 +8,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/common_bg"
         tools:context="com.example.mao.beautylife.activity.SearchActivity">
 
         <FrameLayout
@@ -34,8 +35,20 @@
 
             </android.support.v7.widget.Toolbar>
 
-
         </FrameLayout>
+
+        <EditText
+            android:id="@+id/activity_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/search_hint"
+            android:textColor="@color/textColor_Black"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/search_bg"
+            app:layout_constraintTop_toBottomOf="@+id/activity_user_frame"/>
 
     </android.support.constraint.ConstraintLayout>
 
