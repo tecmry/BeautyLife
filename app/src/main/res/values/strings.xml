@@ -20,4 +20,20 @@
     <string name="name">用户名</string>
     <string name="num">666</string>
     <string name="search_hint">输入品牌、色号、肤色等关键字</string>
+    <string name="主页">主页</string>
+    <string name="试色草原">试色草原</string>
+    <string name="种草视频">种草视频</string>
+    <string name="热门资讯">热门资讯</string>
+    <string name="品牌汇总">品牌汇总</string>
+    <string name="积分问答">积分问答</string>
+    <string name="综合排序">综合排序</string>
+    <string name="最新发布">最新发布</string>
+    <string name="最多点击">最多点击</string>
+    <string name="最多收藏">最多收藏</string>
+    <string name="姓名">姓名</string>
+    <string name="个人标签">个人标签</string>
+    <string name="色号">色号：</string>
+    <string name="色号样例">lady bug</string>
+    <string name="内容">内容</string>
+    <string name="查看全部">查看全部</string>
 </resources>

@@ -53,16 +53,19 @@ public class HomeActivity extends AppCompatActivity implements TabLayoutListener
         switch (tab.getPosition()){
             case 0:
                 tab.setIcon(R.drawable.home_selected);
+                binding.activityHomeTitle.setText("主页");
                 binding.activityHomeTab.getTabAt(1).setIcon(R.drawable.community_unselected);
                 binding.activityHomeTab.getTabAt(2).setIcon(R.drawable.user_unselected);
                 break;
             case 1:
                 tab.setIcon(R.drawable.community_selected);
+                binding.activityHomeTitle.setText("社区");
                 binding.activityHomeTab.getTabAt(0).setIcon(R.drawable.home_unselected);
                 binding.activityHomeTab.getTabAt(2).setIcon(R.drawable.user_unselected);
                 break;
             case 2:
                 tab.setIcon(R.drawable.user_selected);
+                binding.activityHomeTitle.setText("个人资料");
                 binding.activityHomeTab.getTabAt(0).setIcon(R.drawable.home_unselected);
                 binding.activityHomeTab.getTabAt(1).setIcon(R.drawable.community_unselected);
                 break;

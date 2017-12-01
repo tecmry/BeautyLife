@@ -1,14 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/common_bg">
 
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/fragment_community_appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll">
 
-    </RelativeLayout>
+                <com.example.mao.beautylife.view.CoverFlowViewPager
+                    android:id="@+id/fragment_community_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                </com.example.mao.beautylife.view.CoverFlowViewPager>
+
+                <ImageView
+                    android:id="@+id/fragment_community_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/fragment_community_pager"
+                    android:background="@color/itemColor" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragment_community_one"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/one_selected"
+                    android:layout_toStartOf="@+id/fragment_community_two"
+                    android:layout_alignBottom="@+id/fragment_community_three"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignStart="@+id/fragment_community_one"
+                    android:layout_below="@+id/fragment_community_three"
+                    android:text="@string/试色草原"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor_Black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragment_community_two"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/two_unselected"
+                    android:layout_toStartOf="@+id/fragment_community_three"
+                    android:layout_alignBottom="@+id/fragment_community_three"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignStart="@+id/fragment_community_two"
+                    android:layout_below="@+id/fragment_community_three"
+                    android:text="@string/种草视频"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor_Black"/>
+                
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragment_community_three"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/three_unselected"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/fragment_community_pager"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/品牌汇总"
+                    android:layout_below="@+id/fragment_community_three"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor_Black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragment_community_four"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/four_unselected"
+                    android:layout_toEndOf="@+id/fragment_community_three"
+                    android:layout_alignBottom="@+id/fragment_community_three"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignStart="@+id/fragment_community_four"
+                    android:layout_below="@+id/fragment_community_three"
+                    android:text="@string/积分问答"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor_Black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragment_community_five"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/five_unselected"
+                    android:layout_toEndOf="@+id/fragment_community_four"
+                    android:layout_alignBottom="@+id/fragment_community_three"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignStart="@+id/fragment_community_five"
+                    android:layout_below="@+id/fragment_community_three"
+                    android:text="@string/热门资讯"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor_Black"/>
+
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_community_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
 
 </layout>
