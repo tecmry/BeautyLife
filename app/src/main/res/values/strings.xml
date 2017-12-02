@@ -36,4 +36,5 @@
     <string name="色号样例">lady bug</string>
     <string name="内容">内容</string>
     <string name="查看全部">查看全部</string>
+    <dimen name="space">8dp</dimen>
 </resources>
