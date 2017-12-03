@@ -408,8 +408,6 @@
                 android:layout_marginTop="20dp"
                 android:layout_below="@+id/fragment_home_info_one_name"/>
 
-
-
         </RelativeLayout>
 
     </ScrollView>

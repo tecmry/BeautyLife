@@ -26,13 +26,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class CommunityOneFragment extends Fragment implements View.OnClickListener {
 
     private FragmentCommunityOneBinding binding;
+    private OneRecyclerAdapter adapter = new OneRecyclerAdapter();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_community_one, container, false);
         binding.fragmentCommunityRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-        binding.fragmentCommunityRecycler.setAdapter(new OneRecyclerAdapter());
+        binding.fragmentCommunityRecycler.setAdapter(adapter);
         binding.fragmentOneTextOne.setOnClickListener(this);
         binding.fragmentOneTextTwo.setOnClickListener(this);
         binding.fragmentOneTextThree.setOnClickListener(this);
